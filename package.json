@@ -1,12 +1,13 @@
 {
-  "name": "app-name",
+  "name": "rich-text-img-class",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@contentful/field-editor-rich-text": "^0.14.24",
     "@contentful/field-editor-single-line": "^0.11.1",
     "@contentful/field-editor-test-utils": "^0.8.1",
     "@contentful/forma-36-fcss": "^0.2.11",
-    "@contentful/forma-36-react-components": "^3.63.7",
+    "@contentful/forma-36-react-components": "file:packages/forma-36-react-components",
     "@contentful/forma-36-tokens": "^0.9.1",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
