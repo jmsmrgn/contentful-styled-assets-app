@@ -1,6 +1,6 @@
-## About the Styled Assets App
-
 <img width=64 alt="icon" src="src/assets/app icon 256.png" style="width: 64px; float: right; margin-left: 20px;" />
+
+## Contentful Styled Assets App
 
 Often when inserting images into the body of your content fields (such as our Rich Text fieldtype), content designers will want to have just a little more control over the layout. Of course, they can work with their developer team to build out a custom content type and component in their application—but that might be overkill for simple use cases.
 
@@ -14,10 +14,11 @@ The goal of the Styled Assets app is to enable your content designers to add a f
 - Add a link to your CSS documentation for reference
 - Enjoy not having to call your devs for minor style changes to images
 
-## What you'll need
+## Tips
 
-- Be sure your CSS classes are available in your app for them to show. If you're using PurgeCSS to optimize your CSS payload, be sure to whitelist the ones you want.
-- Ensure that your application template is rendering the classes if the field is populated. It's a basic string, so should render an example like: <img class="class1 class2 class3" href="[url] alt="[alt text]" />
+- Be sure your CSS classes are available in your app for them to show. If you're using PurgeCSS to optimize your CSS payload, be sure to whitelist the ones you want, as in [this example](https://tailwindcss.com/docs/controlling-file-size).
+- Ensure that your application template is rendering the classes if the field is populated. It's a basic string, so should render an example like: 
+`<img class="class1 class2 class3" href="[url] alt="[alt text]" />`. You can inject the classes wherever you want in your templates.
 - A full URL link to your design system or external documentation will help your editors.
 
 ---
