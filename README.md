@@ -25,12 +25,9 @@ The goal of the Styled Assets app is to enable your content designers to add a f
 ## Usage
 
 1. Insert an image with the Styled Assets App like you would any normal asset.
-
-<img alt="Styled Assets example" src="src/assets/Contentful - Styled Assets.jpg" style="max-width: 500px" />
-
+<img width="500" alt="Styled Assets example" src="src/assets/Contentful - Styled Assets.jpg" style="max-width: 500px" />
 2. Add space-delimited CSS classes to the field. These will be rendered exactly as typed. 
 The "Docs" button will launch your app's documentation in a new window. This is configured when the App is installed.
-
 3. Check your [Contentful Preview]() to see if it has the desired effect. 
 
 ---
