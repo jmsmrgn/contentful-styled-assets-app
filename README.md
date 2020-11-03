@@ -1,8 +1,10 @@
 ## About the Styled Assets App
 
+<img width=64 alt="icon" src="src/assets/app icon 256.png" style="width: 64px; float: right; margin-left: 20px;" />
+
 Often when inserting images into the body of your content fields (such as our Rich Text fieldtype), content designers will want to have just a little more control over the layout. Of course, they can work with their developer team to build out a custom content type and component in their application—but that might be overkill for simple use cases.
 
-![Styled Assets example](src/assets/Styled Assets - rendered example & infographic.jpg)
+<img alt="Styled Assets example" src="src/assets/Styled Assets - rendered example & infographic.jpg" />
 
 The goal of the Styled Assets app is to enable your content designers to add a few CSS classes to easily enable presentational control over a Contentful image asset. This works best within an existing design system that contains simple utility classes. A popular example of this is the [TailWind CSS](https://tailwindcss.com) framework, which is entirely composed of utility classes. It's up to you.
 
@@ -24,7 +26,7 @@ The goal of the Styled Assets app is to enable your content designers to add a f
 
 1. Insert an image with the Styled Assets App like you would any normal asset.
 
-![Styled Assets example](src/assets/Contentful - Styled Assets.jpg)
+<img alt="Styled Assets example" src="src/assets/Contentful - Styled Assets.jpg" style="max-width: 500px" />
 
 2. Add space-delimited CSS classes to the field. These will be rendered exactly as typed. 
 The "Docs" button will launch your app's documentation in a new window. This is configured when the App is installed.
