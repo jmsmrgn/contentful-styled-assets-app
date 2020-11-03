@@ -1,6 +1,43 @@
+## About the Styled Assets App
+
+Often when inserting images into the body of your content fields (such as our Rich Text fieldtype), content designers will want to have just a little more control over the layout. Of course, they can work with their developer team to build out a custom content type and component in their application—but that might be overkill for simple use cases.
+
+![Styled Assets example](src/assets/Styled Assets - rendered example & infographic.jpg)
+
+The goal of the Styled Assets app is to enable your content designers to add a few CSS classes to easily enable presentational control over a Contentful image asset. This works best within an existing design system that contains simple utility classes. A popular example of this is the [TailWind CSS](https://tailwindcss.com) framework, which is entirely composed of utility classes. It's up to you.
+
+## Benefits
+
+- Easily add CSS classes to any inline image
+- Add a link to your CSS documentation for reference
+- Enjoy not having to call your devs for minor style changes to images
+
+## What you'll need
+
+- Be sure your CSS classes are available in your app for them to show. If you're using PurgeCSS to optimize your CSS payload, be sure to whitelist the ones you want.
+- Ensure that your application template is rendering the classes if the field is populated. It's a basic string, so should render an example like: <img class="class1 class2 class3" href="[url] alt="[alt text]" />
+- A full URL link to your design system or external documentation will help your editors.
+
+---
+
+## Usage
+
+1. Insert an image with the Styled Assets App like you would any normal asset.
+
+![Styled Assets example](src/assets/Contentful - Styled Assets.jpg)
+
+2. Add space-delimited CSS classes to the field. These will be rendered exactly as typed. 
+The "Docs" button will launch your app's documentation in a new window. This is configured when the App is installed.
+
+3. Check your [Contentful Preview]() to see if it has the desired effect. 
+
+---
+
+## Installation
+
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -20,7 +57,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
-## Libraries to use
+### Libraries to use
 
 To make your app look and feel like Contentful use the following libraries:
 
