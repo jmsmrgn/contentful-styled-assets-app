@@ -1,0 +1,42 @@
+@import 'settings/colors';
+@import 'settings/typography';
+@import 'settings/transitions';
+@import 'settings/z-index';
+
+:root {
+  --tooltip-chevron-size: calc(1rem * (10 / var(--font-base-default)));
+}
+
+.Tooltip__target-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.Tooltip {
+  background: var(--color-contrast-mid);
+  font-family: var(--font-stack-primary);
+  font-size: calc(1rem * (12 / var(--font-base-default)));
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+  text-decoration: none;
+  color: var(--color-white);
+  text-align: center;
+  line-height: var(--line-height-default);
+  padding: calc(1rem * (8 / var(--font-base-default)))
+    calc(1rem * (10 / var(--font-base-default)));
+  border-radius: calc(1rem * (4 / var(--font-base-default)));
+  white-space: normal;
+}
+
+.Tooltip--hidden {
+  visibility: hidden;
+  pointer-events: none;
+  z-index: var(--z-index-negative);
+}
+
+.Tooltip__arrow {
+  height: var(--tooltip-chevron-size);
+  width: var(--tooltip-chevron-size);
+  background-color: var(--color-contrast-mid);
+  z-index: var(--z-index-negative);
+}

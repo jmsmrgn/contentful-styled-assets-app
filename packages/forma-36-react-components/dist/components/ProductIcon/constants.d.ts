@@ -1,0 +1,25 @@
+export declare const productIconName: {
+    Apis: string;
+    Apps: string;
+    Billing: string;
+    ContentModel: string;
+    Content: string;
+    Home: string;
+    Media: string;
+    Oauth: string;
+    OrgInfo: string;
+    Organizations: string;
+    Purchase: string;
+    Settings: string;
+    Spaces: string;
+    Sso: string;
+    Subscription: string;
+    Teams: string;
+    Token: string;
+    Usage: string;
+    Users: string;
+    UserProfile: string;
+};
+export declare const productIconSize: string[];
+export declare const productIconColor: string[];
+export declare const productIconTag: string[];

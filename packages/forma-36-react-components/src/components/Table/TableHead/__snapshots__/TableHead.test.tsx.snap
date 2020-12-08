@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "element": "th",
+      "name": "head",
+      "offsetTop": 0,
+    }
+  }
+>
+  <thead
+    className=""
+    data-test-id="cf-ui-table-head"
+  >
+    <TableCell
+      align="left"
+      sorting={false}
+      testId="cf-ui-table-cell"
+    >
+      test
+    </TableCell>
+  </thead>
+</ContextProvider>
+`;
+
+exports[`renders the component as sticky 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "element": "th",
+      "name": "head",
+      "offsetTop": 0,
+    }
+  }
+>
+  <thead
+    className="TableHead--sticky"
+    data-test-id="cf-ui-table-head"
+  >
+    <TableCell
+      align="left"
+      sorting={false}
+      testId="cf-ui-table-cell"
+    >
+      test
+    </TableCell>
+  </thead>
+</ContextProvider>
+`;
+
+exports[`renders the component as sticky and with an offset Top 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "element": "th",
+      "name": "head",
+      "offsetTop": "20px",
+    }
+  }
+>
+  <thead
+    className="TableHead--sticky"
+    data-test-id="cf-ui-table-head"
+  >
+    <TableCell
+      align="left"
+      sorting={false}
+      testId="cf-ui-table-cell"
+    >
+      test
+    </TableCell>
+  </thead>
+</ContextProvider>
+`;
+
+exports[`renders the component with additional className 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "element": "th",
+      "name": "head",
+      "offsetTop": 0,
+    }
+  }
+>
+  <thead
+    className="extra-class-name"
+    data-test-id="cf-ui-table-head"
+  >
+    <TableCell
+      align="left"
+      sorting={false}
+      testId="cf-ui-table-cell"
+    >
+      test
+    </TableCell>
+  </thead>
+</ContextProvider>
+`;

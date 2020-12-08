@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<div
+  className="Asset"
+  data-test-id="cf-ui-asset"
+>
+  <div
+    className="Asset__image-container"
+  >
+    <img
+      alt="Image of a cat"
+      className="Asset__image-container__image"
+      src="https://placekitten.com/200/300"
+    />
+  </div>
+  <div
+    className="Asset__title-container"
+  >
+    <span
+      className="Asset__title-container__title"
+    >
+      Image of a cat
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<div
+  className="Asset extra-class-name"
+  data-test-id="cf-ui-asset"
+>
+  <div
+    className="Asset__image-container"
+  >
+    <img
+      alt="Image of a cat"
+      className="Asset__image-container__image"
+      src="https://placekitten.com/200/300"
+    />
+  </div>
+  <div
+    className="Asset__title-container"
+  >
+    <span
+      className="Asset__title-container__title"
+    >
+      Image of a cat
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders the component with type pdf 1`] = `
+<div
+  className="Asset extra-class-name"
+  data-test-id="cf-ui-asset"
+>
+  <div
+    className="Asset__asset-container"
+  >
+    <div
+      className="Asset__illustration-container"
+    >
+      <AssetIcon
+        testId="cf-ui-asset-icon"
+        type="pdf"
+      />
+    </div>
+    <span
+      className="Asset__asset-container__title"
+    >
+      Image of a cat
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,22 @@
+@import 'settings/dimensions';
+
+.autocompleteDropdown {
+  display: block;
+}
+
+.autocompleteInput {
+  display: flex;
+}
+
+.autocompleteInput input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.autocompleteInput input::-ms-clear {
+  display: none;
+}
+
+.inputIconButton {
+  position: relative;
+  margin-left: calc(-1 * var(--spacing-xl));
+}

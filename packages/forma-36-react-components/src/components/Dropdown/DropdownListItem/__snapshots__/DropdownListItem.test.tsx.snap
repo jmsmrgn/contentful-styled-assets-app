@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<li
+  className="DropdownListItem"
+  data-test-id="cf-ui-dropdown-list-item"
+  role="menuitem"
+>
+  <span>
+    DropdownMenuItem
+  </span>
+</li>
+`;
+
+exports[`renders the component as active 1`] = `
+<li
+  className="DropdownListItem DropdownListItem--active"
+  data-test-id="cf-ui-dropdown-list-item"
+  role="menuitem"
+>
+  <span>
+    entry
+  </span>
+</li>
+`;
+
+exports[`renders the component as disabled 1`] = `
+<li
+  className="DropdownListItem DropdownListItem--disabled"
+  data-test-id="cf-ui-dropdown-list-item"
+  role="menuitem"
+>
+  <span>
+    entry
+  </span>
+</li>
+`;
+
+exports[`renders the component with a href 1`] = `
+<li
+  className="DropdownListItem DropdownListItem__submenu-toggle"
+  data-test-id="cf-ui-dropdown-list-item"
+  role="menuitem"
+>
+  <a
+    className="DropdownListItem__button"
+    data-test-id="cf-ui-dropdown-list-item-button"
+    href="#"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <TabFocusTrap
+      className="DropdownListItem__button__inner-wrapper"
+    >
+      DropdownListItem with a href
+    </TabFocusTrap>
+  </a>
+</li>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<li
+  className="DropdownListItem my-extra-class"
+  data-test-id="cf-ui-dropdown-list-item"
+  role="menuitem"
+>
+  <span
+    className="my-extra-class"
+  >
+    Entry
+  </span>
+</li>
+`;

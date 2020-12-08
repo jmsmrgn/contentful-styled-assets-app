@@ -1,0 +1,108 @@
+@import 'settings/colors';
+@import 'settings/typography';
+@import 'settings/transitions';
+@import 'settings/shadows';
+
+.EntryCard {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  font-family: var(--font-stack-primary);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-default);
+  color: var(--color-text-dark);
+  transition: box-shadow var(--transition-duration-short)
+      var(--transition-easing-default),
+    border-color var(--transition-duration-default)
+      var(--transition-easing-default);
+}
+
+.EntryCard--size-default {
+  height: calc(1rem * (135 / var(--font-base-default)));
+}
+
+.EntryCard--size-small {
+  height: calc(1rem * (84 / var(--font-base-default)));
+}
+
+.EntryCard--size-auto {
+  min-height: calc(1rem * (84 / var(--font-base-default)));
+}
+
+.EntryCard__wrapper {
+  padding: calc(1rem * (14 / var(--font-base-default)));
+  flex: 1 1 0;
+  overflow: auto;
+}
+
+.EntryCard--drag-active {
+  box-shadow: var(--box-shadow-heavy);
+}
+
+.EntryCard--is-loading {
+  overflow: hidden;
+}
+
+.EntryCard__meta {
+  display: flex;
+}
+
+.EntryCard__content-type {
+  flex: 1 1 0;
+  padding-right: calc(1rem * (20 / var(--font-base-default)));
+  margin-bottom: calc(1rem * (4 / var(--font-base-default)));
+  color: var(--color-text-light);
+  font-size: var(--font-size-l);
+  word-break: break-word;
+}
+
+.EntryCard__actions {
+  margin-left: calc(1rem * (8 / var(--font-base-default)));
+}
+
+.EntryCard__content {
+  display: flex;
+}
+
+.EntryCard__body {
+  flex: 1 1 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.EntryCard__title {
+  margin: 0;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-default);
+  word-break: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-demi-bold);
+}
+
+.EntryCard__description {
+  margin: calc(1rem * (4 / var(--font-base-default))) 0 0;
+  line-height: var(--line-height-default);
+  word-break: break-word;
+  white-space: initial;
+  font-size: var(--font-size-l);
+  color: var(--color-text-dark);
+}
+
+.EntryCard__thumbnail {
+  height: 70px;
+  width: 70px;
+  background-color: var(--color-element-lightest);
+  margin: 0 0 0 calc(1rem * (20 / var(--font-base-default)));
+  padding: 0;
+}
+
+.EntryCard__thumbnail img {
+  display: block;
+}
+
+.EntryCard__actions {
+  margin-left: calc(1rem * (10 / var(--font-base-default)));
+}

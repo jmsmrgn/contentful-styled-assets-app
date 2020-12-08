@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allows passing a test id 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="test-id"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`allows passing additional class names to component 1`] = `
+<button
+  className="TextLink testing TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`allows passing additional props not consumed by component 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="Testing Id"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`calls an onClick function 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`prevents onClick function from being called when disabled 1`] = `
+<button
+  className="TextLink TextLink--primary TextLink--disabled"
+  data-test-id="cf-ui-text-link"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a "muted" link type 1`] = `
+<button
+  className="TextLink TextLink--muted"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a "negative" link type 1`] = `
+<button
+  className="TextLink TextLink--negative"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a "positive" link type 1`] = `
+<button
+  className="TextLink TextLink--positive"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a "primary" link type 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a "secondary" link type 1`] = `
+<button
+  className="TextLink TextLink--secondary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a "white" link type 1`] = `
+<button
+  className="TextLink TextLink--white"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a button 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders as a link 1`] = `
+<a
+  className="TextLink TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  href="#"
+>
+  <TabFocusTrap>
+    Text Link
+  </TabFocusTrap>
+</a>
+`;
+
+exports[`renders with an icon 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    <div
+      className="TextLink__icon-wrapper"
+    >
+      <Icon
+        className="TextLink__icon"
+        color="primary"
+        icon="ArrowDown"
+        size="small"
+        testId="cf-ui-icon"
+      />
+    </div>
+    Text Link
+  </TabFocusTrap>
+</button>
+`;
+
+exports[`renders with an icon aligned right to the text 1`] = `
+<button
+  className="TextLink TextLink--primary"
+  data-test-id="cf-ui-text-link"
+  disabled={false}
+  type="button"
+>
+  <TabFocusTrap>
+    Text Link
+    <div
+      className="TextLink__icon-wrapper--right"
+    >
+      <Icon
+        className="TextLink__icon"
+        color="primary"
+        icon="ArrowDown"
+        size="small"
+        testId="cf-ui-icon"
+      />
+    </div>
+  </TabFocusTrap>
+</button>
+`;

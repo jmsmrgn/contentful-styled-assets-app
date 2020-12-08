@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<ul
+  className="EntityList"
+  data-test-id="cf-ui-entity-list"
+/>
+`;
+
+exports[`renders the component with EntityListItems as children 1`] = `
+<ul
+  className="EntityList"
+  data-test-id="cf-ui-entity-list"
+>
+  <EntityListItem
+    contentType="My content type"
+    description="Description 1"
+    entityType="entry"
+    isActionsDisabled={false}
+    testId="cf-ui-entity-list-item"
+    title="Entry 1"
+    withThumbnail={true}
+  />
+  <EntityListItem
+    contentType="My content type"
+    description="Description 2"
+    entityType="entry"
+    isActionsDisabled={false}
+    testId="cf-ui-entity-list-item"
+    title="Entry 2"
+    withThumbnail={true}
+  />
+  <EntityListItem
+    contentType="My content type"
+    description="Description 2"
+    entityType="entry"
+    isActionsDisabled={false}
+    testId="cf-ui-entity-list-item"
+    title="Entry 3"
+    withThumbnail={true}
+  />
+</ul>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<ul
+  className="EntityList my-extra-class"
+  data-test-id="cf-ui-entity-list"
+/>
+`;

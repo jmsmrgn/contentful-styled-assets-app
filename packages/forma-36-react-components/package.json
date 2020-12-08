@@ -1,53 +1,19 @@
 {
-  "_from": "@contentful/forma-36-react-components@^3.63.1",
-  "_id": "@contentful/forma-36-react-components@3.63.7",
-  "_inBundle": false,
-  "_integrity": "sha512-Ei3ljBs4uA/ZOM9+xLFf5q4LcJEaGdvNCjz+Gd3dhDDfYzcQY8YSAUPWwoydmHSvSPYp+IbfoRPuJD62fbxa0Q==",
-  "_location": "/@contentful/forma-36-react-components",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "@contentful/forma-36-react-components@^3.63.1",
-    "name": "@contentful/forma-36-react-components",
-    "escapedName": "@contentful%2fforma-36-react-components",
-    "scope": "@contentful",
-    "rawSpec": "^3.63.1",
-    "saveSpec": null,
-    "fetchSpec": "^3.63.1"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/",
-    "/@contentful/field-editor-single-line"
-  ],
-  "_resolved": "https://registry.npmjs.org/@contentful/forma-36-react-components/-/forma-36-react-components-3.63.7.tgz",
-  "_shasum": "cfab03711533276fa4551e01278a088a2412cecf",
-  "_spec": "@contentful/forma-36-react-components@^3.63.1",
-  "_where": "/Users/jmsmrgn/git/ctfl/app-name",
-  "bugs": {
-    "url": "https://github.com/contentful/forma-36/issues"
-  },
-  "bundleDependencies": false,
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.3.4",
-    "@popperjs/core": "^2.4.4",
-    "classnames": "^2.2.6",
-    "dayjs": "^1.9.1",
-    "react-animate-height": "^2.0.7",
-    "react-copy-to-clipboard": "^5.0.1",
-    "react-modal": "3.6.1",
-    "react-popper": "^2.2.3",
-    "react-transition-group": "^2.4.0",
-    "truncate": "^2.0.1"
-  },
-  "deprecated": false,
+  "name": "@contentful/forma-36-react-components",
   "description": "Contentful UI Component Library",
+  "version": "3.63.11",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "style": "dist/styles.css",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "files": [
+    "package.json",
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -135,12 +101,46 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.5"
   },
-  "files": [
-    "package.json",
-    "dist"
-  ],
-  "gitHead": "5085a84dfc4260e755c297a8f4bd53293d5812a3",
-  "homepage": "https://github.com/contentful/forma-36#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "@popperjs/core": "^2.4.4",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.9.1",
+    "react-animate-height": "^2.0.7",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-modal": "^3.11.2",
+    "react-popper": "^2.2.3",
+    "react-transition-group": "^2.4.0",
+    "truncate": "^2.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "start": "start-storybook -p 9001 -c ./tools/.storybook -s ./tools/.storybook/public",
+    "test": "jest",
+    "build:clean": "rm -rf dist esm",
+    "build:scripts": "BABEL_ENV=build yarn babel src --out-dir dist --ignore 'src/**/*.stories.js','src/**/*.stories.tsx','src/**/*.test.tsx','src/**/*.test.js','src/**/*.css.d.ts' --extensions '.ts','.tsx','.js'",
+    "build:esm": "BABEL_ENV=esm yarn babel src --out-dir esm --ignore 'src/**/*.stories.js','src/**/*.stories.tsx','src/**/*.test.tsx','src/**/*.test.js','src/**/*.css.d.ts' --extensions '.ts','.tsx','.js' && rollup -c tools/rollup.esm.config.js && rm -rf esm",
+    "build:styles": "yarn webpack --config ./tools/webpack.production.config.js",
+    "build:umd": "rollup -c tools/rollup.umd.config.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:post-clean": "rm -rf dist/styles.js dist/main.js",
+    "build": "yarn build:clean && yarn build:scripts && yarn build:styles && yarn build:types && yarn build:post-clean",
+    "size": "size-limit",
+    "generate": "yarn plop --plopfile ./tools/plopfile.js",
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "yarn eslint",
+    "add-component": "yarn generate component",
+    "add-documentation": "yarn generate documentation",
+    "prepublishOnly": "yarn lint && yarn test && yarn build",
+    "travis-deploy-once": "travis-deploy-once --pro",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "semantic-release": "semantic-release",
+    "storybook": "yarn build-storybook -c tools/.storybook -s ./tools/.storybook/public -o dist-storybook"
+  },
   "jest": {
     "globalSetup": "<rootDir>/test/config/globalSetup.js",
     "setupFilesAfterEnv": [
@@ -160,20 +160,9 @@
       "enzyme-to-json/serializer"
     ]
   },
-  "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "name": "@contentful/forma-36-react-components",
-  "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentful/forma-36.git"
+    "url": "https://github.com/contentful/forma-36.git"
   },
   "resolutions": {
     "url-parse": "1.4.4",
@@ -183,34 +172,13 @@
     "set-value": "2.0.1",
     "js-yaml": "3.13.1"
   },
-  "scripts": {
-    "add-component": "yarn generate component",
-    "add-documentation": "yarn generate documentation",
-    "build": "yarn build:clean && yarn build:scripts && yarn build:esm && yarn build:styles && yarn build:types && yarn build:umd && yarn size && yarn build:post-clean",
-    "build:clean": "rm -rf dist esm",
-    "build:esm": "BABEL_ENV=esm yarn babel src --out-dir esm --ignore 'src/**/*.stories.js','src/**/*.stories.tsx','src/**/*.test.tsx','src/**/*.test.js','src/**/*.css.d.ts' --extensions '.ts','.tsx','.js' && rollup -c tools/rollup.esm.config.js && rm -rf esm",
-    "build:post-clean": "rm -rf dist/styles.js dist/main.js",
-    "build:scripts": "BABEL_ENV=build yarn babel src --out-dir dist --ignore 'src/**/*.stories.js','src/**/*.stories.tsx','src/**/*.test.tsx','src/**/*.test.js','src/**/*.css.d.ts' --extensions '.ts','.tsx','.js'",
-    "build:styles": "yarn webpack --config ./tools/webpack.production.config.js",
-    "build:types": "tsc --emitDeclarationOnly",
-    "build:umd": "rollup -c tools/rollup.umd.config.js",
-    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "generate": "yarn plop --plopfile ./tools/plopfile.js",
-    "lint": "yarn eslint",
-    "prepublishOnly": "yarn lint && yarn test && yarn build",
-    "semantic-release": "semantic-release",
-    "size": "size-limit",
-    "start": "start-storybook -p 9001 -c ./tools/.storybook -s ./tools/.storybook/public",
-    "storybook": "yarn build-storybook -c tools/.storybook -s ./tools/.storybook/public -o dist-storybook",
-    "test": "jest",
-    "travis-deploy-once": "travis-deploy-once --pro",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch"
+  "publishConfig": {
+    "access": "public"
   },
-  "sideEffects": [
-    "*.css"
-  ],
-  "style": "dist/styles.css",
-  "types": "dist/index.d.ts",
-  "version": "3.63.7"
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "gitHead": "e7d604672b4c32b089c41fee14f9c878929d7b20"
 }

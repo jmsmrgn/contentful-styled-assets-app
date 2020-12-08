@@ -1,0 +1,286 @@
+@import 'settings/colors';
+@import 'settings/typography';
+@import 'settings/transitions';
+@import 'settings/shadows';
+@import 'settings/borders';
+@import 'settings/z-index';
+
+.Button {
+  composes: focus-border--default from './../../styles/settings/a11y.css';
+}
+
+.Button,
+.Button:link {
+  box-sizing: border-box;
+  height: calc(1rem * (40 / var(--font-base-default)));
+  display: inline-block;
+  padding: 0;
+  border: calc(1rem * (1 / var(--font-base-default))) solid
+    var(--color-element-dark);
+  border-radius: var(--border-radius-medium);
+  font-family: var(--font-stack-primary);
+  font-size: calc(1rem * (14 / var(--font-base-default)));
+  overflow: hidden;
+  background-size: 100% 200%;
+  transition: background var(--transition-duration-default)
+      var(--transition-easing-default),
+    opacity var(--transition-duration-default) var(--transition-easing-default),
+    border-color var(--transition-duration-default)
+      var(--transition-easing-default);
+  vertical-align: middle;
+  text-decoration: none;
+
+  &:hover:not(.Button--disabled) {
+    cursor: pointer;
+  }
+}
+
+.Button__icon {
+  min-width: calc(1rem * (18 / var(--font-base-default)));
+}
+
+.Button--full-width {
+  width: 100%;
+}
+
+.Button--muted {
+  background-color: var(--color-element-light);
+
+  &:hover:not(.Button--disabled),
+  &:focus:not(.Button--disabled) {
+    background-color: var(--color-element-mid);
+  }
+
+  &:active:not(.Button--disabled),
+  &.Button--is-active:not(.Button--disabled) {
+    transition: none;
+    background-color: var(--color-element-dark);
+  }
+}
+
+.Button--naked {
+  background-color: transparent;
+  border: none;
+
+  &:hover:not(.Button--disabled),
+  &:focus:not(.Button--disabled) {
+    background-color: var(--color-element-light);
+  }
+
+  &:active:not(.Button--disabled),
+  &.Button--is-active:not(.Button--disabled) {
+    transition: none;
+    background-color: var(--color-element-mid);
+  }
+
+  &.Button:link {
+    border: none;
+  }
+}
+
+.Button--primary {
+  border-color: var(--color-blue-mid);
+  background-color: var(--color-blue-mid);
+
+  &:hover:not(.Button--disabled),
+  &:focus:not(.Button--disabled) {
+    background-position: 0 100%;
+    border-color: var(--color-blue-base);
+    background-color: var(--color-blue-base);
+  }
+
+  &:focus:not(.Button--disabled) {
+    border-color: var(--color-blue-base);
+    background-color: var(--color-blue-base);
+  }
+
+  &:active:not(.Button--disabled),
+  &.Button--is-active:not(.Button--disabled) {
+    transition: none;
+    background-image: none;
+    border-color: var(--color-blue-base);
+    background-color: var(--color-blue-base);
+  }
+
+  & .Button__label {
+    color: var(--color-element-lightest);
+  }
+
+  &.Button:link {
+    border-color: var(--color-blue-mid);
+  }
+}
+
+.Button--positive {
+  border-color: var(--color-green-mid);
+  background-color: var(--color-green-mid);
+  background-size: 100% 200%;
+
+  &:hover:not(.Button--disabled),
+  &:focus:not(.Button--disabled) {
+    background-position: 0 100%;
+    border-color: var(--color-green-base);
+    background-color: var(--color-green-base);
+  }
+
+  &:focus:not(.Button--disabled) {
+    border-color: var(--color-green-base);
+    background-color: var(--color-green-base);
+  }
+
+  &:active:not(.Button--disabled),
+  &.Button--is-active:not(.Button--disabled) {
+    transition: none;
+    background-image: none;
+    border-color: var(--color-green-base);
+    background-color: var(--color-green-base);
+  }
+
+  & .Button__label {
+    color: var(--color-element-lightest);
+  }
+
+  &.Button:link {
+    border-color: var(--color-green-mid);
+  }
+}
+
+.Button--negative {
+  border-color: var(--color-red-mid);
+  background-color: var(--color-red-mid);
+  background-size: 100% 200%;
+
+  &:hover:not(.Button--disabled),
+  &:focus:not(.Button--disabled) {
+    background-position: 0 100%;
+    border-color: var(--color-red-base);
+    background-color: var(--color-red-base);
+  }
+
+  &:focus:not(.Button--disabled) {
+    border-color: var(--color-red-dark);
+    background-color: var(--color-red-dark);
+  }
+
+  &:active:not(.Button--disabled),
+  &.Button--is-active:not(.Button--disabled) {
+    transition: none;
+    background-image: none;
+    border-color: var(--color-red-dark);
+    background-color: var(--color-red-dark);
+  }
+
+  & .Button__label {
+    color: var(--color-element-lightest);
+  }
+
+  &.Button:link {
+    border-color: var(--color-red-mid);
+  }
+}
+
+.Button--warning {
+  border-color: var(--color-orange-mid);
+  background-color: var(--color-orange-mid);
+  background-size: 100% 200%;
+
+  &:hover:not(.Button--disabled),
+  &:focus:not(.Button--disabled) {
+    background-position: 0 100%;
+    border-color: var(--color-orange-base);
+    background-color: var(--color-orange-base);
+  }
+
+  &:focus:not(.Button--disabled) {
+    border-color: var(--color-orange-base);
+    background-color: var(--color-orange-base);
+  }
+
+  &:active:not(.Button--disabled),
+  &.Button--is-active:not(.Button--disabled) {
+    transition: none;
+    background-image: none;
+    border-color: var(--color-orange-base);
+    background-color: var(--color-orange-base);
+  }
+
+  &.Button__label {
+    color: var(--color-text-dark);
+  }
+
+  &.Button:link {
+    border-color: var(--color-orange-mid);
+  }
+}
+
+.Button--disabled {
+  opacity: 0.5;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.Button__inner-wrapper {
+  display: flex;
+  height: 100%;
+  z-index: var(--z-index-default);
+  padding: 0 calc(1rem * (14 / var(--font-base-default)));
+  align-items: center;
+  justify-content: center;
+}
+
+.Button__label {
+  margin: 0 calc(1rem * (4 / var(--font-base-default)));
+  color: var(--color-text-mid);
+  line-height: 2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.Button--small,
+.Button--small:link {
+  height: calc(1rem * (30 / var(--font-base-default)));
+
+  & .Button__inner-wrapper {
+    padding: 0 calc(1rem * (10 / var(--font-base-default)));
+  }
+
+  & .Button__label {
+    font-size: calc(1rem * (14 / var(--font-base-default)));
+  }
+}
+
+.Button--large {
+  height: calc(1rem * (48 / var(--font-base-default)));
+  & .Button__label {
+    line-height: 1;
+    margin: 0.25rem;
+    font-size: 1.15rem;
+  }
+}
+
+.Button__spinner {
+  transition: opacity,
+    width var(--transition-duration-default) var(--transition-easing-default);
+}
+
+.Button--spinner--enter {
+  opacity: 0;
+  width: 0px;
+}
+
+.Button--spinner-active {
+  opacity: 1;
+  width: 14px;
+}
+
+.Button--spinner--exit {
+  opacity: 1;
+  width: 14px;
+}
+
+.Button--spinner-exit-active {
+  opacity: 0;
+  width: 0px;
+}

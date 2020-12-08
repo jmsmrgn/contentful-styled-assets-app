@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<div
+  className="Switch__wrapper"
+>
+  <input
+    className="Switch"
+    id="testCheckbox"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox"
+  />
+  <FormLabel
+    className="Switch__label"
+    htmlFor="testCheckbox"
+    required={false}
+    requiredText="required"
+    testId="cf-ui-form-label"
+  >
+    foobar
+  </FormLabel>
+</div>
+`;
+
+exports[`renders the component as checked 1`] = `
+<div
+  className="Switch__wrapper"
+>
+  <input
+    className="Switch Switch--checked"
+    defaultChecked={true}
+    id="testCheckbox"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox"
+  />
+  <FormLabel
+    className="Switch__label"
+    htmlFor="testCheckbox"
+    required={false}
+    requiredText="required"
+    testId="cf-ui-form-label"
+  >
+    foobar
+  </FormLabel>
+</div>
+`;
+
+exports[`renders the component as disabled 1`] = `
+<div
+  className="Switch__wrapper"
+>
+  <input
+    className="Switch Switch--disabled"
+    disabled={true}
+    id="testCheckbox"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox"
+  />
+  <FormLabel
+    className="Switch__label Switch__label--disabled"
+    htmlFor="testCheckbox"
+    required={false}
+    requiredText="required"
+    testId="cf-ui-form-label"
+  >
+    foobar
+  </FormLabel>
+</div>
+`;
+
+exports[`renders the component as disabled and checked 1`] = `
+<div
+  className="Switch__wrapper"
+>
+  <input
+    className="Switch Switch--checked Switch--disabled"
+    defaultChecked={true}
+    disabled={true}
+    id="testCheckbox"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox"
+  />
+  <FormLabel
+    className="Switch__label Switch__label--disabled"
+    htmlFor="testCheckbox"
+    required={false}
+    requiredText="required"
+    testId="cf-ui-form-label"
+  >
+    foobar
+  </FormLabel>
+</div>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<div
+  className="Switch__wrapper my-extra-class"
+>
+  <input
+    className="Switch"
+    id="testCheckbox"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox"
+  />
+  <FormLabel
+    className="Switch__label"
+    htmlFor="testCheckbox"
+    required={false}
+    requiredText="required"
+    testId="cf-ui-form-label"
+  >
+    foobar
+  </FormLabel>
+</div>
+`;

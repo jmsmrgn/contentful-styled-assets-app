@@ -1,0 +1,27 @@
+@import 'settings/colors';
+@import 'settings/typography';
+@import 'settings/transitions';
+@import 'settings/shadows';
+@import 'settings/z-index';
+
+.DropdownContainer {
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-default);
+  box-sizing: border-box;
+  border: calc(1rem * (1 / var(--font-base-default))) solid
+    var(--color-element-mid);
+  list-style: none;
+  padding: 0;
+  /*
+   * @todo: Remove this in next breaking change, it's overriden by Popper,
+   * who uses absolute positioning
+   */
+  position: fixed;
+  margin: 0;
+
+  z-index: var(--z-index-dropdown);
+}
+
+.DropdownContainer > div {
+  width: 100%;
+}

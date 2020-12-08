@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<div
+  className="CopyButton"
+  data-test-id="cf-ui-copy-button"
+  id="copyButton"
+>
+  <CopyToClipboard
+    onCopy={[Function]}
+    text=""
+  >
+    <Tooltip
+      containerElement="span"
+      content={
+        <span>
+          <React.Fragment>
+            Copy to 
+            <br />
+             clipboard
+          </React.Fragment>
+        </span>
+      }
+      isVisible={false}
+      maxWidth={360}
+      place="auto"
+      testId="cf-ui-tooltip"
+    >
+      <button
+        className="CopyButton__button"
+        type="button"
+      >
+        <TabFocusTrap
+          className="CopyButton__TabFocusTrap"
+        >
+          <span
+            className="CopyButton__text"
+          >
+            Copy 
+             to clipboard
+          </span>
+          <Icon
+            color="muted"
+            icon="Copy"
+            size="small"
+            testId="cf-ui-icon"
+          />
+        </TabFocusTrap>
+      </button>
+    </Tooltip>
+  </CopyToClipboard>
+</div>
+`;
+
+exports[`renders the component with a copy value 1`] = `
+<div
+  className="CopyButton"
+  data-test-id="cf-ui-copy-button"
+  id="copyButton"
+>
+  <CopyToClipboard
+    onCopy={[Function]}
+    text="test"
+  >
+    <Tooltip
+      containerElement="span"
+      content={
+        <span>
+          <React.Fragment>
+            Copy to 
+            <br />
+             clipboard
+          </React.Fragment>
+        </span>
+      }
+      isVisible={false}
+      maxWidth={360}
+      place="auto"
+      testId="cf-ui-tooltip"
+    >
+      <button
+        className="CopyButton__button"
+        type="button"
+      >
+        <TabFocusTrap
+          className="CopyButton__TabFocusTrap"
+        >
+          <span
+            className="CopyButton__text"
+          >
+            Copy 
+            test
+             to clipboard
+          </span>
+          <Icon
+            color="muted"
+            icon="Copy"
+            size="small"
+            testId="cf-ui-icon"
+          />
+        </TabFocusTrap>
+      </button>
+    </Tooltip>
+  </CopyToClipboard>
+</div>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<div
+  className="CopyButton my-extra-class"
+  data-test-id="cf-ui-copy-button"
+  id="copyButton"
+>
+  <CopyToClipboard
+    onCopy={[Function]}
+    text=""
+  >
+    <Tooltip
+      containerElement="span"
+      content={
+        <span>
+          <React.Fragment>
+            Copy to 
+            <br />
+             clipboard
+          </React.Fragment>
+        </span>
+      }
+      isVisible={false}
+      maxWidth={360}
+      place="auto"
+      testId="cf-ui-tooltip"
+    >
+      <button
+        className="CopyButton__button"
+        type="button"
+      >
+        <TabFocusTrap
+          className="CopyButton__TabFocusTrap"
+        >
+          <span
+            className="CopyButton__text"
+          >
+            Copy 
+             to clipboard
+          </span>
+          <Icon
+            color="muted"
+            icon="Copy"
+            size="small"
+            testId="cf-ui-icon"
+          />
+        </TabFocusTrap>
+      </button>
+    </Tooltip>
+  </CopyToClipboard>
+</div>
+`;

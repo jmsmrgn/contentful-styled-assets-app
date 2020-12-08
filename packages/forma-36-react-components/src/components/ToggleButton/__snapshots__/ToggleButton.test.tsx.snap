@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<Card
+  className="Toggle"
+  padding="none"
+  selected={false}
+  testId="cf-ui-toggle-button"
+>
+  <button
+    aria-pressed={false}
+    className="Toggle__button"
+    data-test-id="button"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <TabFocusTrap
+      className="Toggle__button__inner-wrapper"
+    >
+      <span
+        className="Toggle__content-wrapper"
+      >
+        Toggle
+      </span>
+    </TabFocusTrap>
+  </button>
+</Card>
+`;
+
+exports[`renders the component active 1`] = `
+<Card
+  className="Toggle my-extra-class Toggle--active"
+  padding="none"
+  selected={true}
+  testId="cf-ui-toggle-button"
+>
+  <button
+    aria-pressed={true}
+    className="Toggle__button"
+    data-test-id="button"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <TabFocusTrap
+      className="Toggle__button__inner-wrapper"
+    >
+      <span
+        className="Toggle__content-wrapper"
+      >
+        Toggle
+      </span>
+    </TabFocusTrap>
+  </button>
+</Card>
+`;
+
+exports[`renders the component with an additional class name 1`] = `
+<Card
+  className="Toggle my-extra-class"
+  padding="none"
+  selected={false}
+  testId="cf-ui-toggle-button"
+>
+  <button
+    aria-pressed={false}
+    className="Toggle__button"
+    data-test-id="button"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <TabFocusTrap
+      className="Toggle__button__inner-wrapper"
+    >
+      <span
+        className="Toggle__content-wrapper"
+      >
+        Toggle
+      </span>
+    </TabFocusTrap>
+  </button>
+</Card>
+`;
+
+exports[`renders the component with icon 1`] = `
+<Card
+  className="Toggle my-extra-class"
+  padding="none"
+  selected={false}
+  testId="cf-ui-toggle-button"
+>
+  <button
+    aria-pressed={false}
+    className="Toggle__button"
+    data-test-id="button"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <TabFocusTrap
+      className="Toggle__button__inner-wrapper"
+    >
+      <Icon
+        className="Toggle__button__icon"
+        color="secondary"
+        icon="Entry"
+        size="small"
+        testId="cf-ui-icon"
+      />
+      <span
+        className="Toggle__content-wrapper"
+      >
+        Toggle
+      </span>
+    </TabFocusTrap>
+  </button>
+</Card>
+`;
